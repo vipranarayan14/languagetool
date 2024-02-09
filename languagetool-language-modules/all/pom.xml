@@ -138,6 +138,10 @@
         </dependency>
         <dependency>
             <groupId>org.languagetool</groupId>
+            <artifactId>language-sa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.languagetool</groupId>
             <artifactId>language-sk</artifactId>
         </dependency>
         <dependency>

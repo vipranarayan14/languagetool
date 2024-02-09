@@ -57,6 +57,7 @@
         <module>languagetool-language-modules/lt</module>
         <module>languagetool-language-modules/ml</module>
         <module>languagetool-language-modules/ro</module>
+        <module>languagetool-language-modules/sa</module>
         <module>languagetool-language-modules/sk</module>
         <module>languagetool-language-modules/sl</module>
         <!-- re-add when a maintainer is found: <module>languagetool-language-modules/sr</module>-->
@@ -856,6 +857,11 @@
             <dependency>
                 <groupId>org.languagetool</groupId>
                 <artifactId>language-ru</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.languagetool</groupId>
+                <artifactId>language-sa</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/print.xsl"?>
+<?xml-stylesheet type="text/css" href="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.css"
+        title="Easy editing stylesheet"?>
+
+
+<rules lang="sa"
+    xsi:noNamespaceSchemaLocation="../../../../../../../../../languagetool-core/src/main/resources/org/languagetool/rules/rules.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <!-- ====================================================================== -->
+    <!-- Possible typo -->
+    <!-- ====================================================================== -->
+    <category id="TYPOS" name="Possible Typo" type="misspelling">
+        <rulegroup id="MAKARA_HAL" name="मकार + हल्">
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[क-घ].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा कवर्गीय-वर्णः भवति तदा मकारस्य अनुस्वारः अथवा
+                    ङकारः भवेत्।</message>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ङ्" /><match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <example correction="ग्रामं गच्छति|ग्रामङ्गच्छति" type="incorrect"><marker>ग्रामम् गच्छति</marker></example>
+                <example correction="किं करोति|किङ्करोति" type="incorrect"><marker>किम् करोति</marker>?</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[च-झ].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा चवर्गीय-वर्णः भवति तदा मकारस्य अनुस्वारः अथवा
+                    ञकारः भवेत्।</message>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ञ्" /><match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <example correction="अहं चिन्तयामि|अहञ्चिन्तयामि" type="incorrect"><marker>अहम् चिन्तयामि</marker></example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[ट-ढ].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा टवर्गीय-वर्णः भवति तदा मकारस्य अनुस्वारः अथवा
+                    णकारः भवेत्।</message>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ण्" /><match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <example correction="तं डमरुं|तण्डमरुं" type="incorrect"><marker>तम् डमरुं</marker> वादय</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[त-न].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा तवर्गीय-वर्णः भवति तदा मकारस्य अनुस्वारः अथवा
+                    नकारः भवेत्।</message>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="न्" /><match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <example correction="इदानीं न|इदानीन्न" type="incorrect"><marker>इदानीम् न</marker></example>
+                <example correction="तं तथा|तन्तथा" type="incorrect"><marker>तम् तथा</marker> कृपयाऽविष्टम्</example>
+                <example type="correct">एतं न संशयं छिन्दि प्रमाणं नो भवान्मतः।</example>
+                <example type="correct">एतन्न गर्हितं कर्म कुर्यामहमिदं ध्रुवम्।</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[प-भ].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा पवर्गीय-वर्णः भवति तदा मकारस्य अनुस्वारः अथवा
+                    मकारः भवेत्।</message>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="म्" /><match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <example correction="एवं भवन्तः|एवम्भवन्तः" type="incorrect">न <marker>एवम् भवन्तः</marker>
+                    माम् वक्तुम् अर्हन्ति कुशला जनाः।</example>
+                <example type="correct">यो वै द्विजं बाधते साधुवृत्तम्</example>
+            </rule>
+            <rule>
+                <pattern>
+                    <token regexp="yes">.*म्$</token>
+                    <token regexp="yes">^[य-ह].*</token>
+                </pattern>
+
+                <message>मकारन्तस्य पदस्य पुरतः यदा व्यञ्जनवर्णः भवति तदा मकारस्य अनुस्वारः भवेत्।</message>
+                <suggestion><match no="1" regexp_match="म्$" regexp_replace="ं" /> <match no="2" /></suggestion>
+                <short>सन्धिः</short>
+                <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+                <example correction="फलं वाञ्छति" type="incorrect"><marker>फलम् वाञ्छति</marker></example>
+                <example correction="अहं हसति" type="incorrect"><marker>अहम् हसति</marker></example>
+            </rule>
+        </rulegroup>
+
+        <rule id="ANUSVARA_AC" name="अनुस्वारः + अच्">
+            <pattern>
+                <token regexp="yes">.*ं$</token>
+                <token regexp="yes">^[अ-औ].*</token>
+            </pattern>
+
+            <message>मकारन्तस्य पदस्य पुरतः यदा स्वरवर्णः भवति तदा मकारस्य अनुस्वारः न भवेत्।</message>
+            <suggestion><match no="1" regexp_match="ं$" regexp_replace="म्" /> <match no="2" /></suggestion>
+            <short>सन्धिः</short>
+            <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+            <example correction="देवम् ईक्षित्वा" type="incorrect"><marker>देवं ईक्षित्वा</marker></example>
+            <example correction="इदानीम् अस्ति" type="incorrect"><marker>इदानीं अस्ति</marker></example>
+            <example type="correct">कर्तुम् इच्छा</example>
+        </rule>
+
+        <rule id="ANUSVARA_SENT_END1" name="अनुस्वारः + SENT_END">
+            <pattern>
+                <marker>
+                    <token regexp="yes">.*ं</token>
+                </marker>
+                <token postag="SENT_END" />
+            </pattern>
+
+            <message>वाक्यान्ते अनुस्वारः न भवेत्।</message>
+            <suggestion><match no="1" regexp_match="ं$" regexp_replace="म्" /></suggestion>
+            <short>सन्धिः</short>
+            <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+            <example correction="देवम्" type="incorrect"><marker>देवं</marker>.</example>
+            <example type="correct">कर्तुम्.</example>
+        </rule>
+        <rule id="ANUSVARA_SENT_END2" name="अनुस्वारः @ SENT_END">
+            <pattern>
+                <token regexp="yes" postag="SENT_END">.*ं[।॥]?</token>
+            </pattern>
+
+            <message>वाक्यान्ते अनुस्वारः न भवेत्।</message>
+            <suggestion><match no="1" regexp_match="ं([।॥]?)$" regexp_replace="म्$1" /></suggestion>
+            <short>सन्धिः</short>
+            <!-- <url>https://ashtadhyayi.com/sutraani/8/3/23</url> -->
+            <example correction="देवम्" type="incorrect"><marker>देवं</marker></example>
+            <example correction="इदानीम्" type="incorrect"><marker>इदानीं</marker></example>
+            <example type="correct">कर्तुम्</example>
+        </rule>
+    </category>
+</rules>
