@@ -32,7 +32,6 @@ import org.languagetool.tokenizers.SentenceTokenizer;
 import java.io.IOException;
 import java.util.*;
 
-
 public class Sanskrit extends Language {
 
   @Override
@@ -47,7 +46,7 @@ public class Sanskrit extends Language {
 
   @Override
   public String[] getCountries() {
-    return new String[]{"IN"};
+    return new String[] { "IN" };
   }
 
   @Override
@@ -56,15 +55,18 @@ public class Sanskrit extends Language {
   }
 
   @Override
-  public List<Rule> getRelevantRules(ResourceBundle messages, UserConfig userConfig, Language motherTongue, List<Language> altLanguages) throws IOException {
+  public List<Rule> getRelevantRules(ResourceBundle messages, UserConfig userConfig, Language motherTongue,
+      List<Language> altLanguages) throws IOException {
     return Arrays.asList(
-            new CommaWhitespaceRule(messages),
-            new DoublePunctuationRule(messages),
-            new GenericUnpairedBracketsRule(messages),
-            new MorfologikSanskritSpellerRule(messages, this, userConfig, altLanguages),
-            new UppercaseSentenceStartRule(messages, this),
-            new MultipleWhitespaceRule(messages, this)
-    );
+        // new CommaWhitespaceRule(messages,
+        // Example.wrong("We had coffee<marker> ,</marker> cheese and crackers and
+        // grapes."),
+        // Example.fixed("We had coffee<marker>,</marker> cheese and crackers and
+        // grapes.")),
+        new DoublePunctuationRule(messages),
+        new GenericUnpairedBracketsRule(messages),
+        new MorfologikSanskritSpellerRule(messages, this, userConfig, altLanguages),
+        new MultipleWhitespaceRule(messages, this));
   }
 
   @Override
@@ -72,11 +74,11 @@ public class Sanskrit extends Language {
     return new SRXSentenceTokenizer(this);
   }
 
-//   @NotNull
-//   @Override
-//   public Tagger createDefaultTagger() {
-//     return new Tagger();
-//   }
+  // @NotNull
+  // @Override
+  // public Tagger createDefaultTagger() {
+  // return new Tagger();
+  // }
 
   @Override
   protected SpellingCheckRule createDefaultSpellingRule(ResourceBundle messages) throws IOException {
