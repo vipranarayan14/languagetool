@@ -6504,6 +6504,13 @@
 <afterbreak></afterbreak>
 </rule>
 </languagerule>
+<languagerule languagerulename="Sanskrit">
+<!--  Split at danda: अन्तर्भवति । अस्य। भवति। -> अन्तर्भवति ।, अस्य।, भवति। -->
+<rule break="yes">
+<beforebreak>\p{L}\p{M}?\s?[।॥]</beforebreak>
+<afterbreak></afterbreak>
+</rule>
+</languagerule>
 <languagerule languagerulename="Generic">
 <rule break="yes">
 <beforebreak>[\.!?…][\u00BB\u2019\u201D\u203A"'\p{Pe}\u0002¹²³]*\s</beforebreak>
@@ -6896,6 +6903,7 @@
 <languagemap languagepattern="(BR|br).*" languagerulename="Breton"></languagemap>
 <languagemap languagepattern="(PT|pt).*" languagerulename="Portuguese"></languagemap>
 <languagemap languagepattern="(IT|it).*" languagerulename="Italian"></languagemap>
+<languagemap languagepattern="(SA|sa).*" languagerulename="Sanskrit"></languagemap>
 <languagemap languagepattern="(TA|ta).*" languagerulename="Tamil"></languagemap>
 <languagemap languagepattern="(FA|fa).*" languagerulename="Persian"></languagemap>
 <languagemap languagepattern="(GA|ga).*" languagerulename="Irish"></languagemap>
