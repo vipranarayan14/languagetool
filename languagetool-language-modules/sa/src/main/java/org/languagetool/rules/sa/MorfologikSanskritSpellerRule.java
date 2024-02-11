@@ -27,30 +27,33 @@ import java.io.IOException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-
 public class MorfologikSanskritSpellerRule extends MorfologikSpellerRule {
 
-    public static final String RULE_ID = "MORFOLOGIK_RULE_SA"; /* for ex. Fr_FR for French */
+  public static final String RULE_ID = "MORFOLOGIK_RULE_SA_IN"; /* for ex. Fr_FR for French */
 
-    private static final String RESOURCE_FILENAME = "/sa/hunspell/sa.dict";
+  private static final String RESOURCE_FILENAME = "/sa/hunspell/sa.dict";
 
   public MorfologikSanskritSpellerRule(
-    ResourceBundle messages, 
-    Language language, 
-    UserConfig userConfig, 
-    List<Language> altLanguages
-  ) throws IOException {
+      ResourceBundle messages,
+      Language language,
+      UserConfig userConfig,
+      List<Language> altLanguages) throws IOException {
 
     super(messages, language, userConfig, altLanguages);
   }
 
-    @Override
-    public String getFileName() {
-        return RESOURCE_FILENAME;
-    }
+  @Override
+  public String getFileName() {
+    return RESOURCE_FILENAME;
+  }
 
-    @Override
-    public String getId() {
-        return RULE_ID;
-    }
+  @Override
+  public String getId() {
+    return RULE_ID;
+  }
+
+  @Override
+  protected boolean isLatinScript() {
+    return false;
+  }
 }
